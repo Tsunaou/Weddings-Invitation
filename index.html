@@ -9,17 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#5F7F66;
-  --navy-deep:#52705A;
-  --gold:#B5A06F;
-  --gold-lt:#D9CEAD;
+  --navy:#984343;
+  --navy-deep:#7E3636;
+  --gold:#D79B95;
+  --gold-lt:#F7D7CD;
   --ink:#3A3A3A;
   --gray:#8A8A8A;
-  --paper:#FFFFFF;
+  --paper:#F1E4D9;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
-body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+body{background:#E3D3C6;font-family:'Noto Serif SC','Songti SC','STSong',serif;color:var(--ink);-webkit-font-smoothing:antialiased}
 .page{max-width:480px;margin:0 auto;background:var(--paper);box-shadow:0 0 60px rgba(0,0,0,.10);overflow:hidden;position:relative}
 .en{font-family:'Cormorant Garamond',serif}
 .script{font-family:'Great Vibes',cursive}
@@ -38,22 +38,22 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
 .wi{color:var(--navy);font-size:12px;letter-spacing:.5em;text-indent:.5em;font-weight:600}
 .std{color:var(--gold);font-size:44px;line-height:1.25;margin-top:6px}
 .cover-photo{position:relative;width:82%;margin:34px auto 0}
-.cover-photo .ph{position:relative;z-index:1;width:100%;display:block;box-shadow:0 16px 40px rgba(95,127,102,.18)}
+.cover-photo .ph{position:relative;z-index:1;width:100%;display:block;box-shadow:0 16px 40px rgba(152,67,67,.18)}
 .cover-photo::before{content:'';position:absolute;inset:-12px 12px 12px -12px;border:1px solid var(--gold);z-index:0}
 .cover-names{margin-top:40px;font-size:22px;letter-spacing:.3em;text-indent:.3em;color:var(--navy);font-weight:600}
 .cover-names .amp{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);padding:0 .3em;letter-spacing:0;font-weight:500}
 .cover-sub{margin-top:16px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;line-height:1.9;color:var(--gray)}
 
 /* ---------- music bar ---------- */
-.music{margin:6px auto 0;width:82%;display:flex;align-items:center;gap:12px;border:1px solid #E3E8DB;background:#FAFBF7;padding:12px 16px;box-shadow:0 8px 24px rgba(95,127,102,.06)}
+.music{margin:6px auto 0;width:82%;display:flex;align-items:center;gap:12px;border:1px solid #EDD5CD;background:#FFFFFF;padding:12px 16px;box-shadow:0 8px 24px rgba(152,67,67,.06)}
 .music .btn{flex:none;width:34px;height:34px;border-radius:50%;background:var(--navy);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .music .btn svg{width:12px;height:12px;fill:#fff}
 .music .btn .ic-pause{display:none}
 .music.playing .ic-play{display:none}
 .music.playing .ic-pause{display:block}
-.music .txt{flex:1;text-align:left;font-size:12.5px;letter-spacing:.14em;color:#9D9268}
+.music .txt{flex:1;text-align:left;font-size:12.5px;letter-spacing:.14em;color:#B07B74}
 .music .eq{flex:none;display:flex;align-items:flex-end;gap:3px;height:16px}
-.music .eq i{width:3px;background:var(--gold);height:5px;border-radius:2px}
+.music .eq i{width:3px;background:#91BDC2;height:5px;border-radius:2px}
 .music.playing .eq i{animation:eq 1s ease-in-out infinite}
 .music .eq i:nth-child(2){animation-delay:.2s}
 .music .eq i:nth-child(3){animation-delay:.4s}
@@ -69,12 +69,12 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
 .sec-label{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.5em;text-indent:.5em;color:var(--gold-lt);text-transform:uppercase;text-align:center}
 .sec-title{text-align:center;font-size:20px;letter-spacing:.34em;text-indent:.34em;font-weight:500;margin-top:10px}
 .sec-orn{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px auto}
-.sec-orn i{display:block;width:40px;height:1px;background:rgba(217,206,173,.5)}
+.sec-orn i{display:block;width:40px;height:1px;background:rgba(247,215,205,.5)}
 .sec-orn b{width:5px;height:5px;border:1px solid var(--gold-lt);transform:rotate(45deg)}
 
 /* welcome */
 .welcome .w-en{text-align:left;font-family:'Cormorant Garamond',serif;font-size:14px;letter-spacing:.4em;color:var(--gold-lt);line-height:2.1}
-.duo{position:relative;margin:30px 0 10px;padding:14px;background:rgba(217,206,173,.16);border:1px solid rgba(217,206,173,.4)}
+.duo{position:relative;margin:30px 0 10px;padding:14px;background:rgba(247,215,205,.16);border:1px solid rgba(247,215,205,.4)}
 .duo .row{display:flex;gap:12px}
 .duo img{width:calc(50% - 6px);display:block;object-fit:cover}
 .monogram{text-align:center;color:var(--gold-lt);font-size:30px;margin:26px 0 6px}
@@ -85,7 +85,7 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
 .w-letter .strong2{font-size:16px;letter-spacing:.3em;text-indent:.3em;color:var(--gold-lt);font-weight:500;margin-top:4px}
 
 /* calendar */
-.cal{margin:38px auto 0;background:#fff;color:var(--ink);padding:24px 18px 20px;border:6px solid rgba(217,206,173,.55);box-shadow:0 16px 36px rgba(0,0,0,.18)}
+.cal{margin:38px auto 0;background:#fff;color:var(--ink);padding:24px 18px 20px;border:6px solid rgba(247,215,205,.55);box-shadow:0 16px 36px rgba(0,0,0,.18)}
 .cal-head{display:flex;justify-content:space-between;align-items:baseline;padding:0 4px 12px;border-bottom:1px solid #E7E2D6}
 .cal-head .m{font-size:16px;font-weight:600;color:var(--navy);letter-spacing:.1em}
 .cal-head .y{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--gold);letter-spacing:.14em}
@@ -93,14 +93,14 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
 .cal th{font-family:'Cormorant Garamond',serif;font-size:10.5px;color:#B0A68C;font-weight:500;padding:6px 0;letter-spacing:.06em}
 .cal td{text-align:center;font-size:12.5px;color:#6B655C;padding:7px 0;font-family:'Cormorant Garamond',serif}
 .cal td.bigday{position:relative;color:#fff;font-weight:600}
-.cal td.bigday::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:30px;height:30px;background:var(--gold);border-radius:50%;z-index:0}
+.cal td.bigday::before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:30px;height:30px;background:#91BDC2;border-radius:50%;z-index:0}
 .cal td.bigday span{position:relative;z-index:1}
-.cal-note{text-align:center;margin-top:14px;font-size:11.5px;letter-spacing:.24em;color:#9D9268}
+.cal-note{text-align:center;margin-top:14px;font-size:11.5px;letter-spacing:.24em;color:#B07B74}
 
 /* ---------- story ---------- */
 .story{padding:74px 0 10px;position:relative}
 .story-head{text-align:center;position:relative;padding:0 34px}
-.story-head .q{color:#EDF0E6;font-size:64px;font-family:'Cormorant Garamond',serif;line-height:.6}
+.story-head .q{color:#EFC9BE;font-size:64px;font-family:'Cormorant Garamond',serif;line-height:.6}
 .story-head .t{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--navy);letter-spacing:.14em;font-weight:600;margin-top:6px}
 .story-head .t b{color:var(--gold);font-weight:600}
 .story-head .s{font-size:12px;letter-spacing:.44em;text-indent:.44em;color:#A8A29A;margin-top:12px}
@@ -118,7 +118,7 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
 .collage{position:relative}
 .collage .deco-blob{position:absolute;z-index:0;opacity:.95}
 .collage .deco-leaf{position:absolute;z-index:2}
-.collage .ph{position:relative;z-index:1;width:82%;display:block;box-shadow:0 18px 44px rgba(95,127,102,.16)}
+.collage .ph{position:relative;z-index:1;width:82%;display:block;box-shadow:0 18px 44px rgba(152,67,67,.16)}
 .collage.right .ph{margin-left:auto}
 .collage .vtext{position:absolute;z-index:2;writing-mode:vertical-rl;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11.5px;letter-spacing:.18em;color:#9B9384}
 .collage.left .vtext{right:0;top:24px}
@@ -127,13 +127,13 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
 .ch-poem p{font-size:13.5px;line-height:2.5;letter-spacing:.13em;color:#6E6860}
 .ch-poem .gap{margin-top:14px}
 .ch-poem .hl{color:var(--navy);font-weight:600}
-.chapter .slash{text-align:center;color:#D9DFCE;font-size:15px;letter-spacing:.5em;margin-top:44px}
+.chapter .slash{text-align:center;color:#E3B6B0;font-size:15px;letter-spacing:.5em;margin-top:44px}
 
 /* ---------- closing ---------- */
 .closing{padding:70px 34px 64px;text-align:center}
 .closing .date{font-size:15px;letter-spacing:.3em;text-indent:.3em;color:var(--navy);font-weight:600}
 .closing .l1{margin-top:14px;font-size:19px;letter-spacing:.3em;text-indent:.3em;color:var(--ink);font-weight:500}
-.closing .l2{margin-top:8px;font-size:12.5px;letter-spacing:.2em;color:#9D9268}
+.closing .l2{margin-top:8px;font-size:12.5px;letter-spacing:.2em;color:#B07B74}
 
 /* ---------- details (navy) ---------- */
 .details .blk{margin-top:34px;text-align:center}
@@ -142,7 +142,7 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
 .details .v{margin-top:14px;font-size:13.5px;line-height:2.3;letter-spacing:.14em;color:rgba(255,255,255,.85)}
 .details .v b{color:var(--gold-lt);font-weight:500}
 .details .v small{display:block;font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-top:6px}
-.details .div{width:1px;height:34px;background:rgba(217,206,173,.4);margin:30px auto 0}
+.details .div{width:1px;height:34px;background:rgba(247,215,205,.4);margin:30px auto 0}
 
 /* ---------- ending ---------- */
 .ending{padding:76px 34px 60px;text-align:center;position:relative;overflow:hidden}
@@ -160,10 +160,10 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
 <!-- ═══════ 封面 ═══════ -->
 <div class="cover">
   <svg class="blobs" viewBox="0 0 480 300" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,0 L150,0 C150,60 120,80 90,110 C60,140 55,180 30,200 C15,212 0,215 0,215 Z" fill="#5F7F66"/>
-    <path d="M480,0 L480,150 C460,150 440,130 425,100 C410,70 380,55 370,30 C365,15 368,0 368,0 Z" fill="#5F7F66"/>
-    <path d="M430,28 q6,10 2,20 M442,38 q8,8 6,18 M452,50 q8,6 7,16" stroke="#B5A06F" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-    <g stroke="#B5A06F" stroke-width="1.4" fill="none" stroke-linecap="round">
+    <path d="M0,0 L150,0 C150,60 120,80 90,110 C60,140 55,180 30,200 C15,212 0,215 0,215 Z" fill="#984343"/>
+    <path d="M480,0 L480,150 C460,150 440,130 425,100 C410,70 380,55 370,30 C365,15 368,0 368,0 Z" fill="#984343"/>
+    <path d="M430,28 q6,10 2,20 M442,38 q8,8 6,18 M452,50 q8,6 7,16" stroke="#D79B95" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <g stroke="#D79B95" stroke-width="1.4" fill="none" stroke-linecap="round">
       <path d="M150,52 C190,80 215,120 222,168"/>
       <path d="M168,66 q26,-4 34,14 q-26,6 -34,-14 Z"/>
       <path d="M188,92 q26,-2 32,18 q-27,4 -32,-18 Z"/>
@@ -196,8 +196,8 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
 <!-- ═══════ 欢迎信（藏青） ═══════ -->
 <div style="margin-top:56px">
   <svg class="wave" viewBox="0 0 480 70" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,70 C80,20 160,10 240,30 C320,50 400,45 480,10 L480,70 Z" fill="#B5A06F" opacity=".55"/>
-    <path d="M0,70 C90,35 170,28 250,42 C330,56 410,50 480,24 L480,70 Z" fill="#5F7F66"/>
+    <path d="M0,70 C80,20 160,10 240,30 C320,50 400,45 480,10 L480,70 Z" fill="#91BDC2" opacity=".7"/>
+    <path d="M0,70 C90,35 170,28 250,42 C330,56 410,50 480,24 L480,70 Z" fill="#984343"/>
   </svg>
   <section class="navy-sec welcome">
     <div class="w-en rv">WELCOME<br>TO OUR WEDDING</div>
@@ -231,7 +231,7 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
     </div>
   </section>
   <svg class="wave-bot" viewBox="0 0 480 70" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,70 C90,35 170,28 250,42 C330,56 410,50 480,24 L480,70 Z" fill="#5F7F66"/>
+    <path d="M0,70 C90,35 170,28 250,42 C330,56 410,50 480,24 L480,70 Z" fill="#984343"/>
   </svg>
 </div>
 
@@ -247,13 +247,13 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
   <div class="chapter">
     <div class="ch-head">
       <div class="ch-num rv"><span class="n">1</span><span class="sl">/</span><span class="t">初见</span></div>
-      <svg class="ch-flourish rv d1" width="150" height="14" viewBox="0 0 150 14" aria-hidden="true"><path d="M6,9 C40,2 70,12 75,8 C80,4 60,4 64,8 C70,13 110,4 144,8" stroke="#B5A06F" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
+      <svg class="ch-flourish rv d1" width="150" height="14" viewBox="0 0 150 14" aria-hidden="true"><path d="M6,9 C40,2 70,12 75,8 C80,4 60,4 64,8 C70,13 110,4 144,8" stroke="#D79B95" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
       <div class="ch-sub rv d2">玄武湖畔&nbsp;·&nbsp;一眼心动</div>
     </div>
     <div class="ch-body">
       <div class="collage left">
-        <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" fill="#5F7F66"/></svg>
-        <svg class="deco-leaf" style="right:6px;bottom:-16px" width="90" height="90" viewBox="0 0 90 90"><g stroke="#B5A06F" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M10,80 C30,55 55,35 82,20"/><path d="M26,62 q4,-18 22,-20 q-2,18 -22,20 Z"/><path d="M44,48 q6,-17 24,-18 q-4,17 -24,18 Z"/><path d="M22,68 q18,-2 22,14 q-18,2 -22,-14 Z"/><path d="M40,54 q18,0 21,16 q-18,0 -21,-16 Z"/></g></svg>
+        <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" fill="#984343"/></svg>
+        <svg class="deco-leaf" style="right:6px;bottom:-16px" width="90" height="90" viewBox="0 0 90 90"><g stroke="#D79B95" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M10,80 C30,55 55,35 82,20"/><path d="M26,62 q4,-18 22,-20 q-2,18 -22,20 Z"/><path d="M44,48 q6,-17 24,-18 q-4,17 -24,18 Z"/><path d="M22,68 q18,-2 22,14 q-18,2 -22,-14 Z"/><path d="M40,54 q18,0 21,16 q-18,0 -21,-16 Z"/></g></svg>
         <img class="ph rv-l" src="assets/cover.jpg" alt="初见">
         <div class="vtext">The wind from Xuanwu Lake</div>
       </div>
@@ -273,13 +273,13 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
   <div class="chapter">
     <div class="ch-head">
       <div class="ch-num rv"><span class="n">2</span><span class="sl">/</span><span class="t">探索</span></div>
-      <svg class="ch-flourish rv d1" width="150" height="14" viewBox="0 0 150 14" aria-hidden="true"><path d="M6,9 C40,2 70,12 75,8 C80,4 60,4 64,8 C70,13 110,4 144,8" stroke="#B5A06F" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
+      <svg class="ch-flourish rv d1" width="150" height="14" viewBox="0 0 150 14" aria-hidden="true"><path d="M6,9 C40,2 70,12 75,8 C80,4 60,4 64,8 C70,13 110,4 144,8" stroke="#D79B95" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
       <div class="ch-sub rv d2">四城异地&nbsp;·&nbsp;双向奔赴</div>
     </div>
     <div class="ch-body">
       <div class="collage right">
-        <svg class="deco-blob" style="right:-40px;top:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" fill="#5F7F66"/></svg>
-        <svg class="deco-leaf" style="left:0;bottom:-14px" width="90" height="90" viewBox="0 0 90 90"><g stroke="#B5A06F" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M80,80 C60,55 35,35 8,20"/><path d="M64,62 q-4,-18 -22,-20 q2,18 22,20 Z"/><path d="M46,48 q-6,-17 -24,-18 q4,17 24,18 Z"/><path d="M68,68 q-18,-2 -22,14 q18,2 22,-14 Z"/><path d="M50,54 q-18,0 -21,16 q18,0 21,-16 Z"/></g></svg>
+        <svg class="deco-blob" style="right:-40px;top:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" fill="#984343"/></svg>
+        <svg class="deco-leaf" style="left:0;bottom:-14px" width="90" height="90" viewBox="0 0 90 90"><g stroke="#D79B95" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M80,80 C60,55 35,35 8,20"/><path d="M64,62 q-4,-18 -22,-20 q2,18 22,20 Z"/><path d="M46,48 q-6,-17 -24,-18 q4,17 24,18 Z"/><path d="M68,68 q-18,-2 -22,14 q18,2 22,-14 Z"/><path d="M50,54 q-18,0 -21,16 q18,0 21,-16 Z"/></g></svg>
         <img class="ph rv-r" src="assets/ch2.jpg" alt="探索">
         <div class="vtext">Two cities, one direction</div>
       </div>
@@ -302,13 +302,13 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
   <div class="chapter">
     <div class="ch-head">
       <div class="ch-num rv"><span class="n">3</span><span class="sl">/</span><span class="t">重聚</span></div>
-      <svg class="ch-flourish rv d1" width="150" height="14" viewBox="0 0 150 14" aria-hidden="true"><path d="M6,9 C40,2 70,12 75,8 C80,4 60,4 64,8 C70,13 110,4 144,8" stroke="#B5A06F" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
+      <svg class="ch-flourish rv d1" width="150" height="14" viewBox="0 0 150 14" aria-hidden="true"><path d="M6,9 C40,2 70,12 75,8 C80,4 60,4 64,8 C70,13 110,4 144,8" stroke="#D79B95" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
       <div class="ch-sub rv d2">钱塘江畔&nbsp;·&nbsp;久别重逢</div>
     </div>
     <div class="ch-body">
       <div class="collage left">
-        <svg class="deco-blob" style="left:-40px;top:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" fill="#5F7F66"/></svg>
-        <svg class="deco-leaf" style="right:4px;top:-14px" width="90" height="90" viewBox="0 0 90 90"><g stroke="#B5A06F" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M10,80 C30,55 55,35 82,20"/><path d="M26,62 q4,-18 22,-20 q-2,18 -22,20 Z"/><path d="M44,48 q6,-17 24,-18 q-4,17 -24,18 Z"/><path d="M22,68 q18,-2 22,14 q-18,2 -22,-14 Z"/><path d="M40,54 q18,0 21,16 q-18,0 -21,-16 Z"/></g></svg>
+        <svg class="deco-blob" style="left:-40px;top:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" fill="#984343"/></svg>
+        <svg class="deco-leaf" style="right:4px;top:-14px" width="90" height="90" viewBox="0 0 90 90"><g stroke="#D79B95" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M10,80 C30,55 55,35 82,20"/><path d="M26,62 q4,-18 22,-20 q-2,18 -22,20 Z"/><path d="M44,48 q6,-17 24,-18 q-4,17 -24,18 Z"/><path d="M22,68 q18,-2 22,14 q-18,2 -22,-14 Z"/><path d="M40,54 q18,0 21,16 q-18,0 -21,-16 Z"/></g></svg>
         <img class="ph rv-l" src="assets/end.jpg" alt="重聚">
         <div class="vtext">Finally, side by side</div>
       </div>
@@ -332,13 +332,13 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
   <div class="chapter">
     <div class="ch-head">
       <div class="ch-num rv"><span class="n">4</span><span class="sl">/</span><span class="t">新篇</span></div>
-      <svg class="ch-flourish rv d1" width="150" height="14" viewBox="0 0 150 14" aria-hidden="true"><path d="M6,9 C40,2 70,12 75,8 C80,4 60,4 64,8 C70,13 110,4 144,8" stroke="#B5A06F" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
+      <svg class="ch-flourish rv d1" width="150" height="14" viewBox="0 0 150 14" aria-hidden="true"><path d="M6,9 C40,2 70,12 75,8 C80,4 60,4 64,8 C70,13 110,4 144,8" stroke="#D79B95" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
       <div class="ch-sub rv d2">七年故事&nbsp;·&nbsp;落笔成我们</div>
     </div>
     <div class="ch-body">
       <div class="collage right">
-        <svg class="deco-blob" style="right:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" fill="#5F7F66"/></svg>
-        <svg class="deco-leaf" style="left:2px;top:-16px" width="90" height="90" viewBox="0 0 90 90"><g stroke="#B5A06F" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M80,80 C60,55 35,35 8,20"/><path d="M64,62 q-4,-18 -22,-20 q2,18 22,20 Z"/><path d="M46,48 q-6,-17 -24,-18 q4,17 24,18 Z"/><path d="M68,68 q-18,-2 -22,14 q18,2 22,-14 Z"/><path d="M50,54 q-18,0 -21,16 q18,0 21,-16 Z"/></g></svg>
+        <svg class="deco-blob" style="right:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" fill="#984343"/></svg>
+        <svg class="deco-leaf" style="left:2px;top:-16px" width="90" height="90" viewBox="0 0 90 90"><g stroke="#D79B95" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M80,80 C60,55 35,35 8,20"/><path d="M64,62 q-4,-18 -22,-20 q2,18 22,20 Z"/><path d="M46,48 q-6,-17 -24,-18 q4,17 24,18 Z"/><path d="M68,68 q-18,-2 -22,14 q18,2 22,-14 Z"/><path d="M50,54 q-18,0 -21,16 q18,0 21,-16 Z"/></g></svg>
         <img class="ph rv-r" src="assets/ch4.jpg" alt="新篇">
       </div>
       <div class="ch-poem">
@@ -365,8 +365,8 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
 <!-- ═══════ 时间地点（藏青） ═══════ -->
 <div>
   <svg class="wave" viewBox="0 0 480 70" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,70 C80,20 160,10 240,30 C320,50 400,45 480,10 L480,70 Z" fill="#B5A06F" opacity=".55"/>
-    <path d="M0,70 C90,35 170,28 250,42 C330,56 410,50 480,24 L480,70 Z" fill="#5F7F66"/>
+    <path d="M0,70 C80,20 160,10 240,30 C320,50 400,45 480,10 L480,70 Z" fill="#91BDC2" opacity=".7"/>
+    <path d="M0,70 C90,35 170,28 250,42 C330,56 410,50 480,24 L480,70 Z" fill="#984343"/>
   </svg>
   <section class="navy-sec details">
     <div class="blk" style="margin-top:6px">
@@ -380,7 +380,7 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
     </div>
   </section>
   <svg class="wave-bot" viewBox="0 0 480 70" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,70 C90,35 170,28 250,42 C330,56 410,50 480,24 L480,70 Z" fill="#5F7F66"/>
+    <path d="M0,70 C90,35 170,28 250,42 C330,56 410,50 480,24 L480,70 Z" fill="#984343"/>
   </svg>
 </div>
 
@@ -392,7 +392,7 @@ body{background:#E8E6E1;font-family:'Noto Serif SC','Songti SC','STSong',serif;c
   <div class="e3 script rv d3">O &amp; X</div>
   <div class="e4 rv d4">WELCOME&nbsp;TO&nbsp;OUR&nbsp;WEDDING</div>
   <svg class="leaf-end rv d5" width="120" height="60" viewBox="0 0 120 60" aria-hidden="true">
-    <g stroke="#B5A06F" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <g stroke="#D79B95" stroke-width="1.2" fill="none" stroke-linecap="round">
       <path d="M60,55 C58,35 55,18 48,5"/>
       <path d="M57,40 q-16,-2 -20,-16 q16,0 20,16 Z"/>
       <path d="M56,26 q-15,-4 -17,-18 q15,2 17,18 Z"/>
