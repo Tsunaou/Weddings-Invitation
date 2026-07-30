@@ -147,6 +147,42 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
 .ch-poem .gap{margin-top:14px}
 .ch-poem .hl{color:var(--navy);font-weight:600}
 .chapter .slash{text-align:center;color:var(--slash);font-size:15px;letter-spacing:.5em;margin-top:44px}
+/* ch1 初见 · 双照错落 */
+.duo2{position:relative;padding:8px 2px 30px}
+.duo2 .pf{background:#FFFDFC;padding:8px 8px 32px;box-shadow:0 16px 40px rgba(var(--deep-rgb),.17);position:relative}
+.duo2 .pf img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center}
+.duo2 .pf .cap{position:absolute;left:0;right:0;bottom:6px;text-align:center;font-family:'Great Vibes',cursive;font-size:16px;color:var(--small)}
+.duo2 .a{width:70%;transform:rotate(-3deg);z-index:1}
+.duo2 .b{width:58%;margin:-16% 2px 0 auto;transform:rotate(2.6deg);z-index:2}
+.duo2 .tape{position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(-2deg);width:64px;height:20px;background:rgba(var(--lt-rgb),.72);box-shadow:0 2px 5px rgba(var(--deep-rgb),.1);z-index:3}
+/* ch2 探索 · 城市足迹横滑 */
+.city-wrap{margin:6px -34px 0}
+.city-scroll{display:flex;gap:16px;overflow-x:auto;padding:16px 24px 20px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.city-scroll::-webkit-scrollbar{display:none}
+.city-card{flex:0 0 60%;scroll-snap-align:center;background:#FFFDFC;padding:9px 9px 40px;box-shadow:0 15px 36px rgba(var(--deep-rgb),.16);position:relative;transform:rotate(var(--r,0deg))}
+.city-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center}
+.city-card .cn{position:absolute;left:0;right:0;bottom:17px;text-align:center;font-size:13.5px;letter-spacing:.3em;color:var(--navy);font-weight:600}
+.city-card .en{position:absolute;left:0;right:0;bottom:4px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:10px;letter-spacing:.14em;color:#A79E8F}
+.dots{display:flex;justify-content:center;gap:7px;margin-top:2px}
+.dots i{width:6px;height:6px;border-radius:99px;background:rgba(var(--deep-rgb),.18);transition:all .35s}
+.dots i.on{width:18px;background:var(--navy)}
+/* ch3 重聚 · 主图+足迹格 */
+.reunion .main-ph{background:#FFFDFC;padding:9px 9px 36px;box-shadow:0 16px 40px rgba(var(--deep-rgb),.17);position:relative;transform:rotate(-1.2deg)}
+.reunion .main-ph img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 70%}
+.reunion .main-ph .cap{position:absolute;left:0;right:0;bottom:7px;text-align:center;font-family:'Great Vibes',cursive;font-size:17px;color:var(--small)}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:20px}
+.rcard{background:#FFFDFC;padding:7px 7px 27px;box-shadow:0 12px 30px rgba(var(--deep-rgb),.14);position:relative}
+.rcard:nth-child(odd){transform:rotate(-1.6deg)}
+.rcard:nth-child(even){transform:rotate(1.4deg)}
+.rcard img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
+.rcard .tag{position:absolute;left:0;right:0;bottom:5px;text-align:center;font-size:11.5px;letter-spacing:.2em;color:var(--navy);font-weight:600}
+/* ch4 新篇 · 滚动照片墙 */
+.film{margin:4px -34px 0;overflow:hidden;position:relative;z-index:1;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.film-row{display:flex;gap:12px;width:max-content;padding:6px 0;animation:filmL 40s linear infinite}
+.film-row.rev{animation:filmR 46s linear infinite}
+.film-row img{height:208px;width:auto;border-radius:8px;box-shadow:0 12px 28px rgba(var(--deep-rgb),.2);display:block}
+@keyframes filmL{to{transform:translateX(-50%)}}
+@keyframes filmR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 
 /* ---------- closing ---------- */
 .closing{padding:70px 34px 64px;text-align:center}
@@ -273,8 +309,10 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <div class="collage left">
         <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
         <svg class="deco-leaf" style="right:6px;bottom:-16px" width="90" height="90" viewBox="0 0 90 90"><g class="s-accent" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M10,80 C30,55 55,35 82,20"/><path d="M26,62 q4,-18 22,-20 q-2,18 -22,20 Z"/><path d="M44,48 q6,-17 24,-18 q-4,17 -24,18 Z"/><path d="M22,68 q18,-2 22,14 q-18,2 -22,-14 Z"/><path d="M40,54 q18,0 21,16 q-18,0 -21,-16 Z"/></g></svg>
-        <img class="ph rv-l" src="assets/cover.jpg" alt="初见">
-        <div class="vtext">The wind from Xuanwu Lake</div>
+        <div class="duo2 rv-l">
+          <div class="pf a"><span class="tape"></span><img src="assets/ch1a.jpg" alt="玄武湖畔"><div class="cap">Xuanwu Lake</div></div>
+          <div class="pf b"><span class="tape"></span><img src="assets/ch1b.jpg" alt="初见的地方"><div class="cap">Where we met</div></div>
+        </div>
       </div>
       <div class="ch-poem">
         <p class="rv d1">一番主动换来一次邂逅</p>
@@ -299,8 +337,15 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <div class="collage right">
         <svg class="deco-blob" style="right:-40px;top:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
         <svg class="deco-leaf" style="left:0;bottom:-14px" width="90" height="90" viewBox="0 0 90 90"><g class="s-accent" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M80,80 C60,55 35,35 8,20"/><path d="M64,62 q-4,-18 -22,-20 q2,18 22,20 Z"/><path d="M46,48 q-6,-17 -24,-18 q4,17 24,18 Z"/><path d="M68,68 q-18,-2 -22,14 q18,2 22,-14 Z"/><path d="M50,54 q-18,0 -21,16 q18,0 21,-16 Z"/></g></svg>
-        <img class="ph rv-r" src="assets/ch2.jpg" alt="探索">
-        <div class="vtext">Two cities, one direction</div>
+        <div class="city-wrap rv-r">
+          <div class="city-scroll" id="cityScroll">
+            <div class="city-card" style="--r:-1.6deg"><img src="assets/ch2-nj.jpg" alt="南京"><div class="cn">南&nbsp;京</div><div class="en">Nanjing</div></div>
+            <div class="city-card" style="--r:1.4deg"><img src="assets/ch2-hz.jpg" alt="杭州"><div class="cn">杭&nbsp;州</div><div class="en">Hangzhou</div></div>
+            <div class="city-card" style="--r:-1.2deg"><img src="assets/ch2-sz.jpg" alt="深圳"><div class="cn">深&nbsp;圳</div><div class="en">Shenzhen</div></div>
+            <div class="city-card" style="--r:1.8deg"><img src="assets/ch2-gz.jpg" alt="广州"><div class="cn">广&nbsp;州</div><div class="en">Guangzhou</div></div>
+          </div>
+          <div class="dots" id="cityDots"><i class="on"></i><i></i><i></i><i></i></div>
+        </div>
       </div>
       <div class="ch-poem">
         <p class="rv d1">毕业，是终点，是起点</p>
@@ -328,8 +373,15 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <div class="collage left">
         <svg class="deco-blob" style="left:-40px;top:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
         <svg class="deco-leaf" style="right:4px;top:-14px" width="90" height="90" viewBox="0 0 90 90"><g class="s-accent" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M10,80 C30,55 55,35 82,20"/><path d="M26,62 q4,-18 22,-20 q-2,18 -22,20 Z"/><path d="M44,48 q6,-17 24,-18 q-4,17 -24,18 Z"/><path d="M22,68 q18,-2 22,14 q-18,2 -22,-14 Z"/><path d="M40,54 q18,0 21,16 q-18,0 -21,-16 Z"/></g></svg>
-        <img class="ph rv-l" src="assets/end.jpg" alt="重聚">
-        <div class="vtext">Finally, side by side</div>
+        <div class="reunion rv-l">
+          <div class="main-ph"><img src="assets/ch3-sea.jpg" alt="泉州海边"><div class="cap">Writing our names in the sand</div></div>
+          <div class="rgrid">
+            <div class="rcard"><img src="assets/ch3-air.jpg" alt="机场接机"><div class="tag">机场接机</div></div>
+            <div class="rcard"><img src="assets/ch3-hd.jpg" alt="横店同游"><div class="tag">横店同游</div></div>
+            <div class="rcard"><img src="assets/ch3-nj.jpg" alt="南京重游"><div class="tag">南京重游</div></div>
+            <div class="rcard"><img src="assets/ch3-dis.jpg" alt="迪士尼"><div class="tag">迪士尼乐园</div></div>
+          </div>
+        </div>
       </div>
       <div class="ch-poem">
         <p class="rv d1">有缘人不负有心人</p>
@@ -358,7 +410,16 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <div class="collage right">
         <svg class="deco-blob" style="right:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
         <svg class="deco-leaf" style="left:2px;top:-16px" width="90" height="90" viewBox="0 0 90 90"><g class="s-accent" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M80,80 C60,55 35,35 8,20"/><path d="M64,62 q-4,-18 -22,-20 q2,18 22,20 Z"/><path d="M46,48 q-6,-17 -24,-18 q4,17 24,18 Z"/><path d="M68,68 q-18,-2 -22,14 q18,2 22,-14 Z"/><path d="M50,54 q-18,0 -21,16 q18,0 21,-16 Z"/></g></svg>
-        <img class="ph rv-r" src="assets/ch4.jpg" alt="新篇">
+        <div class="film rv-r">
+          <div class="film-row">
+            <img src="assets/wed8.jpg" alt="婚纱照"><img src="assets/wed3.jpg" alt="婚纱照"><img src="assets/wed1.jpg" alt="婚纱照"><img src="assets/wed6.jpg" alt="婚纱照">
+            <img src="assets/wed8.jpg" alt="婚纱照"><img src="assets/wed3.jpg" alt="婚纱照"><img src="assets/wed1.jpg" alt="婚纱照"><img src="assets/wed6.jpg" alt="婚纱照">
+          </div>
+          <div class="film-row rev">
+            <img src="assets/wed5.jpg" alt="婚纱照"><img src="assets/wed7.jpg" alt="婚纱照"><img src="assets/wed4.jpg" alt="婚纱照"><img src="assets/wed2.jpg" alt="婚纱照">
+            <img src="assets/wed5.jpg" alt="婚纱照"><img src="assets/wed7.jpg" alt="婚纱照"><img src="assets/wed4.jpg" alt="婚纱照"><img src="assets/wed2.jpg" alt="婚纱照">
+          </div>
+        </div>
       </div>
       <div class="ch-poem">
         <p class="rv d1">从年少懵懂到沉稳笃定</p>
@@ -472,6 +533,15 @@ btn.addEventListener('click',()=>{
   if(bgm.paused){ bgm.play().then(()=>bar.classList.add('playing')).catch(()=>{}); }
   else{ bgm.pause(); bar.classList.remove('playing'); }
 });
+
+// 城市足迹圆点联动
+const cs=document.getElementById('cityScroll'),cd=document.querySelectorAll('#cityDots i');
+if(cs){cs.addEventListener('scroll',()=>{
+  const cards=cs.querySelectorAll('.city-card'),cx=cs.scrollLeft+cs.clientWidth/2;
+  let bi=0,bd=1e9;
+  cards.forEach((c,i)=>{const cc=c.offsetLeft+c.offsetWidth/2,d=Math.abs(cc-cx);if(d<bd){bd=d;bi=i;}});
+  cd.forEach((d,i)=>d.classList.toggle('on',i===bi));
+},{passive:true});}
 </script>
 </body>
 </html>
