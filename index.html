@@ -154,14 +154,68 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
 .ch-poem .gap{margin-top:14px}
 .ch-poem .hl{color:var(--navy);font-weight:600}
 .chapter .slash{text-align:center;color:var(--slash);font-size:15px;letter-spacing:.5em;margin-top:44px}
-/* 章节照片组 · 文后干净排列 */
-.pg{margin-top:40px;position:relative;z-index:1}
-.pg .one{display:block;width:82%;margin:0 auto;border:1px solid rgba(var(--deep-rgb),.1);box-shadow:0 14px 34px rgba(var(--deep-rgb),.13)}
-.pg .pair{display:flex;gap:12px;margin-top:14px}
-.pg .pair img{width:calc(50% - 6px);display:block;object-fit:cover;border:1px solid rgba(var(--deep-rgb),.1);box-shadow:0 12px 28px rgba(var(--deep-rgb),.11)}
-.pg .pair.p45 img{aspect-ratio:4/5;object-position:center 32%}
-.pg .pair.p34 img{aspect-ratio:4/3;object-position:center 40%}
-.pg .pair.p34 img:first-child:last-child{aspect-ratio:auto}
+/* 章节照片版式系统（10 种可切换） */
+.pgsw{position:relative;z-index:1}
+.swbtns{display:flex;justify-content:center;align-items:center;gap:7px;margin-top:38px}
+.swbtns span{font-size:10px;letter-spacing:.22em;color:#B7AD9C}
+.swbtns i{width:21px;height:21px;border-radius:50%;border:1px solid rgba(var(--deep-rgb),.22);color:var(--small);font-size:11px;font-style:normal;display:flex;align-items:center;justify-content:center;cursor:pointer;font-family:'Cormorant Garamond',serif;transition:.25s}
+.swbtns i.on{background:var(--navy);border-color:var(--navy);color:#FDF6F0}
+.pg{margin-top:26px;position:relative;z-index:1}
+.pg figure{margin:0}
+.pg img{display:block;width:100%}
+.pg figure.dup{display:none}
+/* 1 拍立得错落 */
+.pg.l1{display:flex;flex-wrap:wrap;align-items:flex-start}
+.pg.l1 figure{background:#FFFDFC;padding:8px 8px 16px;box-shadow:0 16px 40px rgba(var(--deep-rgb),.16);position:relative}
+.pg.l1 figure::before{content:'';position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(-2deg);width:58px;height:18px;background:rgba(var(--lt-rgb),.72);box-shadow:0 2px 5px rgba(var(--deep-rgb),.08)}
+.pg.l1 figure:nth-child(1){flex:0 0 72%;transform:rotate(-3deg)}
+.pg.l1 figure:nth-child(2){flex:0 0 58%;margin:-14% 0 0 auto;transform:rotate(2.6deg)}
+.pg.l1 figure:nth-child(n+3){flex:0 0 47%;margin-top:22px}
+.pg.l1 figure:nth-child(odd):nth-child(n+3){transform:rotate(-2deg)}
+.pg.l1 figure:nth-child(even):nth-child(n+4){transform:rotate(2deg);margin-left:6%}
+/* 2 纯净网格 */
+.pg.l2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pg.l2 img{aspect-ratio:4/5;object-fit:cover;object-position:center 32%;border:1px solid rgba(var(--deep-rgb),.1);box-shadow:0 12px 28px rgba(var(--deep-rgb),.11)}
+.pg.l2.c5 figure:first-child{grid-column:1/-1}
+.pg.l2.c5 figure:first-child img{aspect-ratio:4/3;object-position:center 62%}
+.pg.l2 figure:only-child img{aspect-ratio:auto}
+/* 3 一大带小 */
+.pg.l3{display:flex;flex-wrap:wrap;gap:12px}
+.pg.l3 figure:first-child{flex:0 0 84%;margin:0 auto 2px}
+.pg.l3 figure:first-child img{border:1px solid rgba(var(--deep-rgb),.1);box-shadow:0 14px 34px rgba(var(--deep-rgb),.13)}
+.pg.l3 figure:nth-child(n+2){flex:1 1 40%}
+.pg.l3 figure:nth-child(n+2) img{aspect-ratio:4/3;object-fit:cover;object-position:center 40%;border:1px solid rgba(var(--deep-rgb),.1);box-shadow:0 12px 28px rgba(var(--deep-rgb),.11)}
+/* 4 横滑卡片 */
+.pg.l4{display:flex;gap:14px;overflow-x:auto;padding:6px 34px 18px;margin:26px -34px 0;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.pg.l4::-webkit-scrollbar{display:none}
+.pg.l4 figure{flex:0 0 62%;scroll-snap-align:center;background:#FFFDFC;padding:9px;box-shadow:0 15px 36px rgba(var(--deep-rgb),.15)}
+.pg.l4 figure:nth-child(odd){transform:rotate(-1.4deg)}
+.pg.l4 figure:nth-child(even){transform:rotate(1.4deg)}
+.pg.l4 img{aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+/* 5 瀑布双列 */
+.pg.l5{columns:2;column-gap:12px}
+.pg.l5 figure{break-inside:avoid;margin-bottom:12px}
+.pg.l5 img{border:1px solid rgba(var(--deep-rgb),.1);box-shadow:0 10px 26px rgba(var(--deep-rgb),.1)}
+/* 6 整幅堆叠 */
+.pg.l6 figure{width:86%;margin:0 auto 18px}
+.pg.l6 img{border-radius:12px;box-shadow:0 16px 38px rgba(var(--deep-rgb),.16)}
+/* 7 圆形小辑 */
+.pg.l7{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;padding:4px 0 8px}
+.pg.l7 figure{flex:0 0 30%}
+.pg.l7 img{aspect-ratio:1;object-fit:cover;object-position:center 28%;border-radius:50%;border:1px solid rgba(var(--deep-rgb),.18);box-shadow:0 10px 24px rgba(var(--deep-rgb),.12)}
+.pg.l7 figure:first-child:nth-last-child(2),.pg.l7 figure:first-child:nth-last-child(2)~figure{flex-basis:44%}
+/* 8 细框画廊 */
+.pg.l8 figure{width:88%;margin:0 auto 24px;padding:9px;border:1px solid var(--gold);background:rgba(255,253,252,.5)}
+.pg.l8 img{box-shadow:0 10px 26px rgba(var(--deep-rgb),.14)}
+/* 9 错落偏移 */
+.pg.l9{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-bottom:32px}
+.pg.l9 figure:nth-child(even){transform:translateY(30px)}
+.pg.l9 img{aspect-ratio:3/4;object-fit:cover;object-position:center 30%;border-radius:10px;box-shadow:0 14px 32px rgba(var(--deep-rgb),.14)}
+/* 10 循环照片墙 */
+.pg.l10{display:flex;gap:12px;width:max-content;margin:26px -34px 0;padding:6px 0;animation:filmL 46s linear infinite;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.pg.l10 figure{flex:0 0 auto}
+.pg.l10 figure.dup{display:block}
+.pg.l10 img{height:206px;width:auto;border-radius:8px;box-shadow:0 12px 28px rgba(var(--deep-rgb),.2)}
 /* ch1 初见 · 双照错落 */
 .duo2{position:relative;padding:8px 2px 30px}
 .duo2 .pf{background:#FFFDFC;padding:8px 8px 32px;box-shadow:0 16px 40px rgba(var(--deep-rgb),.17);position:relative}
@@ -323,6 +377,16 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <div class="ch-sub rv d2">玄武湖畔&nbsp;·&nbsp;一眼心动</div>
     </div>
     <div class="ch-body">
+      <div class="pgsw" data-ch="1">
+        <div class="swbtns rv"><span>版式</span><i class="on">1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i></div>
+        <div class="collage left">
+          <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
+          <div class="pg l1 rv-l">
+            <figure><img src="assets/ch1a.jpg" alt="初见"></figure>
+            <figure><img src="assets/ch1b.jpg" alt="初见"></figure>
+          </div>
+        </div>
+      </div>
       <div class="ch-poem">
         <p class="rv d1">一番主动换来一次邂逅</p>
         <p class="rv d2">一次尝试修成一段缘分</p>
@@ -330,15 +394,6 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
         <p class="rv d4">夏日里的满目星河</p>
         <p class="rv d5">在万里澄空中格外闪耀</p>
         <p class="rv d6 hl">从此开启了我们的故事</p>
-      </div>
-      <div class="collage left">
-        <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
-        <div class="pg rv-l">
-          <div class="pair">
-            <img src="assets/ch1a.jpg" alt="初见">
-            <img src="assets/ch1b.jpg" alt="初见">
-          </div>
-        </div>
       </div>
     </div>
     <div class="slash rv">/////////</div>
@@ -363,16 +418,15 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
         <p class="rv d8">让曾经一时热烈的心动</p>
         <p class="rv d8 hl">化为眼里最坚定的选择</p>
       </div>
-      <div class="collage right">
-        <svg class="deco-blob" style="right:-40px;top:-10px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
-        <div class="pg rv-r">
-          <div class="pair p45">
-            <img src="assets/ch2-nj.jpg" alt="南京">
-            <img src="assets/ch2-hz.jpg" alt="杭州">
-          </div>
-          <div class="pair p45">
-            <img src="assets/ch2-sz.jpg" alt="深圳">
-            <img src="assets/ch2-gz.jpg" alt="广州">
+      <div class="pgsw" data-ch="2">
+        <div class="swbtns rv"><span>版式</span><i>1</i><i class="on">2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i></div>
+        <div class="collage right">
+          <svg class="deco-blob" style="right:-40px;top:-10px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
+          <div class="pg l2 rv-r">
+            <figure><img src="assets/ch2-nj.jpg" alt="南京"></figure>
+            <figure><img src="assets/ch2-hz.jpg" alt="杭州"></figure>
+            <figure><img src="assets/ch2-sz.jpg" alt="深圳"></figure>
+            <figure><img src="assets/ch2-gz.jpg" alt="广州"></figure>
           </div>
         </div>
       </div>
@@ -400,17 +454,16 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
         <p class="rv d8 gap">所有的可期的来日</p>
         <p class="rv d8 hl">都在陪伴中有了雏形</p>
       </div>
-      <div class="collage left">
-        <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
-        <div class="pg rv-l">
-          <img class="one" src="assets/ch3-sea.jpg" alt="海边">
-          <div class="pair p34">
-            <img src="assets/ch3-air.jpg" alt="重逢">
-            <img src="assets/ch3-hd.jpg" alt="同游">
-          </div>
-          <div class="pair p34">
-            <img src="assets/ch3-nj.jpg" alt="故地">
-            <img src="assets/ch3-dis.jpg" alt="乐园">
+      <div class="pgsw" data-ch="3">
+        <div class="swbtns rv"><span>版式</span><i>1</i><i>2</i><i class="on">3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i></div>
+        <div class="collage left">
+          <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
+          <div class="pg l3 c5 rv-l">
+            <figure><img src="assets/ch3-sea.jpg" alt="海边"></figure>
+            <figure><img src="assets/ch3-air.jpg" alt="重逢"></figure>
+            <figure><img src="assets/ch3-hd.jpg" alt="同游"></figure>
+            <figure><img src="assets/ch3-nj.jpg" alt="故地"></figure>
+            <figure><img src="assets/ch3-dis.jpg" alt="乐园"></figure>
           </div>
         </div>
       </div>
@@ -436,15 +489,18 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
         <p class="rv d7 gap">过去，我们走入彼此的世界</p>
         <p class="rv d8 hl">往后，我们将开启新的篇章</p>
       </div>
-      <div class="collage right">
-        <div class="film rv-r">
-          <div class="film-row">
-            <img src="assets/wed8.jpg" alt="婚纱照"><img src="assets/wed3.jpg" alt="婚纱照"><img src="assets/wed1.jpg" alt="婚纱照"><img src="assets/wed6.jpg" alt="婚纱照">
-            <img src="assets/wed8.jpg" alt="婚纱照"><img src="assets/wed3.jpg" alt="婚纱照"><img src="assets/wed1.jpg" alt="婚纱照"><img src="assets/wed6.jpg" alt="婚纱照">
-          </div>
-          <div class="film-row rev">
-            <img src="assets/wed5.jpg" alt="婚纱照"><img src="assets/wed7.jpg" alt="婚纱照"><img src="assets/wed4.jpg" alt="婚纱照"><img src="assets/wed2.jpg" alt="婚纱照">
-            <img src="assets/wed5.jpg" alt="婚纱照"><img src="assets/wed7.jpg" alt="婚纱照"><img src="assets/wed4.jpg" alt="婚纱照"><img src="assets/wed2.jpg" alt="婚纱照">
+      <div class="pgsw" data-ch="4">
+        <div class="swbtns rv"><span>版式</span><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i class="on">10</i></div>
+        <div class="collage right">
+          <div class="pg l10 rv-r">
+            <figure><img src="assets/wed8.jpg" alt="婚纱照"></figure>
+            <figure><img src="assets/wed3.jpg" alt="婚纱照"></figure>
+            <figure><img src="assets/wed1.jpg" alt="婚纱照"></figure>
+            <figure><img src="assets/wed6.jpg" alt="婚纱照"></figure>
+            <figure><img src="assets/wed5.jpg" alt="婚纱照"></figure>
+            <figure><img src="assets/wed7.jpg" alt="婚纱照"></figure>
+            <figure><img src="assets/wed4.jpg" alt="婚纱照"></figure>
+            <figure><img src="assets/wed2.jpg" alt="婚纱照"></figure>
           </div>
         </div>
       </div>
@@ -551,6 +607,24 @@ btn.addEventListener('click',()=>{
   else{ bgm.pause(); bar.classList.remove('playing'); }
 });
 
+// 章节照片版式切换
+document.querySelectorAll('.pgsw').forEach(w=>{
+  const pg=w.querySelector('.pg'),btns=w.querySelectorAll('.swbtns i'),key='pg-ch'+w.dataset.ch;
+  function setL(n){
+    pg.className=pg.className.replace(/\s*l\d+\b/,'')+' l'+n;
+    btns.forEach(b=>b.classList.toggle('on',b.textContent.trim()===String(n)));
+    if(n==10&&!pg.dataset.cloned){
+      const m=pg.children.length;
+      for(let i=0;i<m;i++){const c=pg.children[i].cloneNode(true);c.classList.add('dup');pg.appendChild(c);}
+      pg.dataset.cloned='1';
+    }
+    try{localStorage.setItem(key,n)}catch(e){}
+  }
+  btns.forEach(b=>b.addEventListener('click',()=>setL(b.textContent.trim())));
+  let saved=null;try{saved=localStorage.getItem(key)}catch(e){}
+  if(saved)setL(saved);
+  else if(/\bl10\b/.test(pg.className))setL(10);
+});
 </script>
 </body>
 </html>
