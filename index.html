@@ -154,6 +154,14 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
 .ch-poem .gap{margin-top:14px}
 .ch-poem .hl{color:var(--navy);font-weight:600}
 .chapter .slash{text-align:center;color:var(--slash);font-size:15px;letter-spacing:.5em;margin-top:44px}
+/* 章节照片组 · 文后干净排列 */
+.pg{margin-top:40px;position:relative;z-index:1}
+.pg .one{display:block;width:82%;margin:0 auto;border:1px solid rgba(var(--deep-rgb),.1);box-shadow:0 14px 34px rgba(var(--deep-rgb),.13)}
+.pg .pair{display:flex;gap:12px;margin-top:14px}
+.pg .pair img{width:calc(50% - 6px);display:block;object-fit:cover;border:1px solid rgba(var(--deep-rgb),.1);box-shadow:0 12px 28px rgba(var(--deep-rgb),.11)}
+.pg .pair.p45 img{aspect-ratio:4/5;object-position:center 32%}
+.pg .pair.p34 img{aspect-ratio:4/3;object-position:center 40%}
+.pg .pair.p34 img:first-child:last-child{aspect-ratio:auto}
 /* ch1 初见 · 双照错落 */
 .duo2{position:relative;padding:8px 2px 30px}
 .duo2 .pf{background:#FFFDFC;padding:8px 8px 32px;box-shadow:0 16px 40px rgba(var(--deep-rgb),.17);position:relative}
@@ -184,7 +192,7 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
 .rcard img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center}
 .rcard .tag{position:absolute;left:0;right:0;bottom:5px;text-align:center;font-size:11.5px;letter-spacing:.2em;color:var(--navy);font-weight:600}
 /* ch4 新篇 · 滚动照片墙 */
-.film{margin:4px -34px 0;overflow:hidden;position:relative;z-index:1;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.film{margin:36px -34px 0;overflow:hidden;position:relative;z-index:1;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .film-row{display:flex;gap:12px;width:max-content;padding:6px 0;animation:filmL 40s linear infinite}
 .film-row.rev{animation:filmR 46s linear infinite}
 .film-row img{height:208px;width:auto;border-radius:8px;box-shadow:0 12px 28px rgba(var(--deep-rgb),.2);display:block}
@@ -315,14 +323,6 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <div class="ch-sub rv d2">玄武湖畔&nbsp;·&nbsp;一眼心动</div>
     </div>
     <div class="ch-body">
-      <div class="collage left">
-        <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
-        <svg class="deco-leaf" style="right:6px;bottom:-16px" width="90" height="90" viewBox="0 0 90 90"><g class="s-accent" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M10,80 C30,55 55,35 82,20"/><path d="M26,62 q4,-18 22,-20 q-2,18 -22,20 Z"/><path d="M44,48 q6,-17 24,-18 q-4,17 -24,18 Z"/><path d="M22,68 q18,-2 22,14 q-18,2 -22,-14 Z"/><path d="M40,54 q18,0 21,16 q-18,0 -21,-16 Z"/></g></svg>
-        <div class="duo2 rv-l">
-          <div class="pf a"><span class="tape"></span><img src="assets/ch1a.jpg" alt="玄武湖畔"><div class="cap">Xuanwu Lake</div></div>
-          <div class="pf b"><span class="tape"></span><img src="assets/ch1b.jpg" alt="初见的地方"><div class="cap">Where we met</div></div>
-        </div>
-      </div>
       <div class="ch-poem">
         <p class="rv d1">一番主动换来一次邂逅</p>
         <p class="rv d2">一次尝试修成一段缘分</p>
@@ -330,6 +330,15 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
         <p class="rv d4">夏日里的满目星河</p>
         <p class="rv d5">在万里澄空中格外闪耀</p>
         <p class="rv d6 hl">从此开启了我们的故事</p>
+      </div>
+      <div class="collage left">
+        <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
+        <div class="pg rv-l">
+          <div class="pair">
+            <img src="assets/ch1a.jpg" alt="初见">
+            <img src="assets/ch1b.jpg" alt="初见">
+          </div>
+        </div>
       </div>
     </div>
     <div class="slash rv">/////////</div>
@@ -343,19 +352,6 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <div class="ch-sub rv d2">四城异地&nbsp;·&nbsp;双向奔赴</div>
     </div>
     <div class="ch-body">
-      <div class="collage right">
-        <svg class="deco-blob" style="right:-40px;top:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
-        <svg class="deco-leaf" style="left:0;bottom:-14px" width="90" height="90" viewBox="0 0 90 90"><g class="s-accent" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M80,80 C60,55 35,35 8,20"/><path d="M64,62 q-4,-18 -22,-20 q2,18 22,20 Z"/><path d="M46,48 q-6,-17 -24,-18 q4,17 24,18 Z"/><path d="M68,68 q-18,-2 -22,14 q18,2 22,-14 Z"/><path d="M50,54 q-18,0 -21,16 q18,0 21,-16 Z"/></g></svg>
-        <div class="city-wrap rv-r">
-          <div class="city-scroll" id="cityScroll">
-            <div class="city-card" style="--r:-1.6deg"><img src="assets/ch2-nj.jpg" alt="南京"><div class="cn">南&nbsp;京</div><div class="en">Nanjing</div></div>
-            <div class="city-card" style="--r:1.4deg"><img src="assets/ch2-hz.jpg" alt="杭州"><div class="cn">杭&nbsp;州</div><div class="en">Hangzhou</div></div>
-            <div class="city-card" style="--r:-1.2deg"><img src="assets/ch2-sz.jpg" alt="深圳"><div class="cn">深&nbsp;圳</div><div class="en">Shenzhen</div></div>
-            <div class="city-card" style="--r:1.8deg"><img src="assets/ch2-gz.jpg" alt="广州"><div class="cn">广&nbsp;州</div><div class="en">Guangzhou</div></div>
-          </div>
-          <div class="dots" id="cityDots"><i class="on"></i><i></i><i></i><i></i></div>
-        </div>
-      </div>
       <div class="ch-poem">
         <p class="rv d1">毕业，是终点，是起点</p>
         <p class="rv d2">有人留在校园深造</p>
@@ -366,6 +362,19 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
         <p class="rv d7 gap">时间与距离慢慢打磨着感情</p>
         <p class="rv d8">让曾经一时热烈的心动</p>
         <p class="rv d8 hl">化为眼里最坚定的选择</p>
+      </div>
+      <div class="collage right">
+        <svg class="deco-blob" style="right:-40px;top:-10px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
+        <div class="pg rv-r">
+          <div class="pair p45">
+            <img src="assets/ch2-nj.jpg" alt="南京">
+            <img src="assets/ch2-hz.jpg" alt="杭州">
+          </div>
+          <div class="pair p45">
+            <img src="assets/ch2-sz.jpg" alt="深圳">
+            <img src="assets/ch2-gz.jpg" alt="广州">
+          </div>
+        </div>
       </div>
     </div>
     <div class="slash rv">/////////</div>
@@ -379,19 +388,6 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <div class="ch-sub rv d2">钱塘江畔&nbsp;·&nbsp;久别重逢</div>
     </div>
     <div class="ch-body">
-      <div class="collage left">
-        <svg class="deco-blob" style="left:-40px;top:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
-        <svg class="deco-leaf" style="right:4px;top:-14px" width="90" height="90" viewBox="0 0 90 90"><g class="s-accent" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M10,80 C30,55 55,35 82,20"/><path d="M26,62 q4,-18 22,-20 q-2,18 -22,20 Z"/><path d="M44,48 q6,-17 24,-18 q-4,17 -24,18 Z"/><path d="M22,68 q18,-2 22,14 q-18,2 -22,-14 Z"/><path d="M40,54 q18,0 21,16 q-18,0 -21,-16 Z"/></g></svg>
-        <div class="reunion rv-l">
-          <div class="main-ph"><img src="assets/ch3-sea.jpg" alt="泉州海边"><div class="cap">Writing our names in the sand</div></div>
-          <div class="rgrid">
-            <div class="rcard"><img src="assets/ch3-air.jpg" alt="机场接机"><div class="tag">机场接机</div></div>
-            <div class="rcard"><img src="assets/ch3-hd.jpg" alt="横店同游"><div class="tag">横店同游</div></div>
-            <div class="rcard"><img src="assets/ch3-nj.jpg" alt="南京重游"><div class="tag">南京重游</div></div>
-            <div class="rcard"><img src="assets/ch3-dis.jpg" alt="迪士尼"><div class="tag">迪士尼乐园</div></div>
-          </div>
-        </div>
-      </div>
       <div class="ch-poem">
         <p class="rv d1">有缘人不负有心人</p>
         <p class="rv d2">珠江水终汇钱塘畔</p>
@@ -403,6 +399,20 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
         <p class="rv d8">共享悲欢 · 共绪余生</p>
         <p class="rv d8 gap">所有的可期的来日</p>
         <p class="rv d8 hl">都在陪伴中有了雏形</p>
+      </div>
+      <div class="collage left">
+        <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
+        <div class="pg rv-l">
+          <img class="one" src="assets/ch3-sea.jpg" alt="海边">
+          <div class="pair p34">
+            <img src="assets/ch3-air.jpg" alt="重逢">
+            <img src="assets/ch3-hd.jpg" alt="同游">
+          </div>
+          <div class="pair p34">
+            <img src="assets/ch3-nj.jpg" alt="故地">
+            <img src="assets/ch3-dis.jpg" alt="乐园">
+          </div>
+        </div>
       </div>
     </div>
     <div class="slash rv">/////////</div>
@@ -416,9 +426,17 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <div class="ch-sub rv d2">七年故事&nbsp;·&nbsp;落笔成我们</div>
     </div>
     <div class="ch-body">
+      <div class="ch-poem">
+        <p class="rv d1">从年少懵懂到沉稳笃定</p>
+        <p class="rv d2">我们将七年的故事在此落笔</p>
+        <p class="rv d3 hl">用一场婚礼为这篇情诗作序</p>
+        <p class="rv d4 gap">字字句句 · 皆有回响</p>
+        <p class="rv d5">朝朝暮暮 · 皆为见证</p>
+        <p class="rv d6">岁岁年年 · 皆是你我</p>
+        <p class="rv d7 gap">过去，我们走入彼此的世界</p>
+        <p class="rv d8 hl">往后，我们将开启新的篇章</p>
+      </div>
       <div class="collage right">
-        <svg class="deco-blob" style="right:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
-        <svg class="deco-leaf" style="left:2px;top:-16px" width="90" height="90" viewBox="0 0 90 90"><g class="s-accent" stroke-width="1.3" fill="none" stroke-linecap="round"><path d="M80,80 C60,55 35,35 8,20"/><path d="M64,62 q-4,-18 -22,-20 q2,18 22,20 Z"/><path d="M46,48 q-6,-17 -24,-18 q4,17 24,18 Z"/><path d="M68,68 q-18,-2 -22,14 q18,2 22,-14 Z"/><path d="M50,54 q-18,0 -21,16 q18,0 21,-16 Z"/></g></svg>
         <div class="film rv-r">
           <div class="film-row">
             <img src="assets/wed8.jpg" alt="婚纱照"><img src="assets/wed3.jpg" alt="婚纱照"><img src="assets/wed1.jpg" alt="婚纱照"><img src="assets/wed6.jpg" alt="婚纱照">
@@ -429,16 +447,6 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
             <img src="assets/wed5.jpg" alt="婚纱照"><img src="assets/wed7.jpg" alt="婚纱照"><img src="assets/wed4.jpg" alt="婚纱照"><img src="assets/wed2.jpg" alt="婚纱照">
           </div>
         </div>
-      </div>
-      <div class="ch-poem">
-        <p class="rv d1">从年少懵懂到沉稳笃定</p>
-        <p class="rv d2">我们将七年的故事在此落笔</p>
-        <p class="rv d3 hl">用一场婚礼为这篇情诗作序</p>
-        <p class="rv d4 gap">字字句句 · 皆有回响</p>
-        <p class="rv d5">朝朝暮暮 · 皆为见证</p>
-        <p class="rv d6">岁岁年年 · 皆是你我</p>
-        <p class="rv d7 gap">过去，我们走入彼此的世界</p>
-        <p class="rv d8 hl">往后，我们将开启新的篇章</p>
       </div>
     </div>
   </div>
@@ -543,14 +551,6 @@ btn.addEventListener('click',()=>{
   else{ bgm.pause(); bar.classList.remove('playing'); }
 });
 
-// 城市足迹圆点联动
-const cs=document.getElementById('cityScroll'),cd=document.querySelectorAll('#cityDots i');
-if(cs){cs.addEventListener('scroll',()=>{
-  const cards=cs.querySelectorAll('.city-card'),cx=cs.scrollLeft+cs.clientWidth/2;
-  let bi=0,bd=1e9;
-  cards.forEach((c,i)=>{const cc=c.offsetLeft+c.offsetWidth/2,d=Math.abs(cc-cx);if(d<bd){bd=d;bi=i;}});
-  cd.forEach((d,i)=>d.classList.toggle('on',i===bi));
-},{passive:true});}
 </script>
 </body>
 </html>
