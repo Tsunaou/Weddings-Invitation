@@ -133,6 +133,12 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
 
 /* chapter */
 .chapter{padding:64px 0 8px;position:relative;overflow:hidden}
+/* 单图展示 & 视频 */
+.solo{width:84%;margin:26px auto 0;position:relative;z-index:1}
+.solo figure{margin:0;border-radius:6px;overflow:hidden;box-shadow:0 14px 34px rgba(var(--deep-rgb),.16),0 2px 8px rgba(var(--deep-rgb),.08)}
+.solo img{display:block;width:100%;height:auto}
+.vidwrap{width:88%;margin:26px auto 0;position:relative;z-index:1;border-radius:8px;overflow:hidden;box-shadow:0 16px 38px rgba(var(--deep-rgb),.2),0 2px 8px rgba(var(--deep-rgb),.1)}
+.vidwrap video{display:block;width:100%;height:auto;background:#000}
 .ch-head{text-align:center;position:relative}
 .ch-num{display:inline-flex;align-items:baseline;gap:6px}
 .ch-num .n{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--navy);font-weight:600;font-variant-numeric:lining-nums}
@@ -419,10 +425,10 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
         <p class="rv d8 hl">化为眼里最坚定的选择</p>
       </div>
       <div class="pgsw" data-ch="2">
-        <div class="swbtns rv"><span>版式</span><i>1</i><i class="on">2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i></div>
+        <div class="swbtns rv"><span>版式</span><i>1</i><i>2</i><i>3</i><i class="on">4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i></div>
         <div class="collage right">
           <svg class="deco-blob" style="right:-40px;top:-10px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
-          <div class="pg l2 rv-r">
+          <div class="pg l4 rv-r">
             <figure><img src="assets/ch2-nj.jpg" alt="南京"></figure>
             <figure><img src="assets/ch2-hz.jpg" alt="杭州"></figure>
             <figure><img src="assets/ch2-sz.jpg" alt="深圳"></figure>
@@ -454,17 +460,10 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
         <p class="rv d8 gap">所有的可期的来日</p>
         <p class="rv d8 hl">都在陪伴中有了雏形</p>
       </div>
-      <div class="pgsw" data-ch="3">
-        <div class="swbtns rv"><span>版式</span><i>1</i><i>2</i><i class="on">3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i>10</i></div>
-        <div class="collage left">
-          <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
-          <div class="pg l3 c5 rv-l">
-            <figure><img src="assets/ch3-sea.jpg" alt="海边"></figure>
-            <figure><img src="assets/ch3-air.jpg" alt="重逢"></figure>
-            <figure><img src="assets/ch3-hd.jpg" alt="同游"></figure>
-            <figure><img src="assets/ch3-nj.jpg" alt="故地"></figure>
-            <figure><img src="assets/ch3-dis.jpg" alt="乐园"></figure>
-          </div>
+      <div class="collage left">
+        <svg class="deco-blob" style="left:-40px;bottom:-30px" width="150" height="150" viewBox="0 0 150 150"><path d="M20,10 C60,-5 110,10 120,50 C130,90 110,140 70,145 C30,150 5,120 8,80 C10,45 0,25 20,10 Z" class="f-deep"/></svg>
+        <div class="solo rv-l">
+          <figure><img src="assets/ch3-collage.jpg" alt="重聚"></figure>
         </div>
       </div>
     </div>
@@ -489,19 +488,9 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
         <p class="rv d7 gap">过去，我们走入彼此的世界</p>
         <p class="rv d8 hl">往后，我们将开启新的篇章</p>
       </div>
-      <div class="pgsw" data-ch="4">
-        <div class="swbtns rv"><span>版式</span><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i><i class="on">10</i></div>
-        <div class="collage right">
-          <div class="pg l10 rv-r">
-            <figure><img src="assets/wed8.jpg" alt="婚纱照"></figure>
-            <figure><img src="assets/wed3.jpg" alt="婚纱照"></figure>
-            <figure><img src="assets/wed1.jpg" alt="婚纱照"></figure>
-            <figure><img src="assets/wed6.jpg" alt="婚纱照"></figure>
-            <figure><img src="assets/wed5.jpg" alt="婚纱照"></figure>
-            <figure><img src="assets/wed7.jpg" alt="婚纱照"></figure>
-            <figure><img src="assets/wed4.jpg" alt="婚纱照"></figure>
-            <figure><img src="assets/wed2.jpg" alt="婚纱照"></figure>
-          </div>
+      <div class="collage right">
+        <div class="vidwrap rv-r">
+          <video controls playsinline webkit-playsinline preload="none" poster="assets/ch4-video-poster.jpg" src="assets/ch4-video.mp4"></video>
         </div>
       </div>
     </div>
