@@ -615,12 +615,34 @@ tpBtn.addEventListener('click',e=>{e.stopPropagation();tpPanel.classList.toggle(
 document.addEventListener('click',e=>{if(!tpPanel.contains(e.target))tpPanel.classList.remove('open');});
 applyTheme(curTheme);
 
-// 音乐播放/暂停
+// 音乐播放/暂停 + 自动播放
 const bgm=document.getElementById('bgm'),bar=document.getElementById('musicBar'),btn=document.getElementById('musicBtn');
-btn.addEventListener('click',()=>{
+btn.addEventListener('click',(e)=>{
+  e.stopPropagation();
   if(bgm.paused){ bgm.play().then(()=>bar.classList.add('playing')).catch(()=>{}); }
   else{ bgm.pause(); bar.classList.remove('playing'); }
 });
+// 自动播放：先直接尝试，被拦截则在微信就绪或首次触摸/点击页面时播放
+function autoPlayMusic(){
+  if(!bgm.paused)return;
+  bgm.play().then(()=>{
+    bar.classList.add('playing');
+  }).catch(()=>{
+    const kick=()=>{
+      bgm.play().then(()=>bar.classList.add('playing')).catch(()=>{});
+      document.removeEventListener('touchstart',kick);
+      document.removeEventListener('click',kick);
+    };
+    document.addEventListener('touchstart',kick,{once:false});
+    document.addEventListener('click',kick);
+  });
+}
+window.addEventListener('load',autoPlayMusic);
+if(typeof WeixinJSBridge!=='undefined'){
+  WeixinJSBridge.invoke('getNetworkType',{},autoPlayMusic);
+}else{
+  document.addEventListener('WeixinJSBridgeReady',function(){WeixinJSBridge.invoke('getNetworkType',{},autoPlayMusic);});
+}
 
 // 章节照片版式切换
 document.querySelectorAll('.pgsw').forEach(w=>{
