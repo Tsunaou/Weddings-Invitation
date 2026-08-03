@@ -578,13 +578,11 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
   <p>文案撰写：欧阳先生</p>
   <p>排版优化：肖小姐</p>
   <p>技术支持：Kimi</p>
-  <p>迭代版本：V26</p>
+  <p>迭代版本：V28</p>
 </footer>
 
 </div>
 
-<div class="theme-btn" id="themeBtn">🎨 风格</div>
-<div class="theme-panel" id="themePanel"><div class="tp-title">选择配色风格</div></div>
 
 <audio id="bgm" src="assets/prelude.mp3" loop preload="auto"></audio>
 <script>
@@ -597,36 +595,6 @@ document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>io.observe(el));
 window.addEventListener('load',()=>{
   document.querySelectorAll('.cover .rv,.cover-head .rv').forEach(el=>el.classList.add('in'));
 });
-// 主题切换
-const THEMES=[
- {id:'maroon',nm:'酒红粉金',c:['#F1E4D9','#984343','#D79B95','#F7D7CD','#91BDC2']},
- {id:'olive',nm:'花园橄榄',c:['#F2EEE8','#6F7F6A','#D9A3A0','#E7C6C1','#AFC3B1']},
- {id:'seaglass',nm:'海玻璃绿',c:['#F5F6F4','#6F8676','#DEAC97','#F2E6C9','#B7C4B4']},
- {id:'nude',nm:'裸棕奶茶',c:['#EBE5DE','#9B8578','#B99F83','#CABAAD','#DBD1C7']},
- {id:'dustyblue',nm:'雾蓝香槟',c:['#F6F4EF','#7A93A6','#C9B189','#F0E9DC','#AEC4D2']},
- {id:'lavender',nm:'薰衣草紫',c:['#F5F2F6','#857799','#C9A9B8','#E9E1EE','#B4A8C4']}
-];
-const tpBtn=document.getElementById('themeBtn'),tpPanel=document.getElementById('themePanel');
-let curTheme=localStorage.getItem('wed-theme')||'maroon';
-function applyTheme(id){
-  curTheme=id;
-  if(id==='maroon'){document.documentElement.removeAttribute('data-theme');}
-  else{document.documentElement.setAttribute('data-theme',id);}
-  localStorage.setItem('wed-theme',id);
-  tpPanel.querySelectorAll('.tp-item').forEach(el=>el.classList.toggle('on',el.dataset.id===id));
-}
-THEMES.forEach(t=>{
-  const d=document.createElement('div');
-  d.className='tp-item';d.dataset.id=t.id;
-  d.innerHTML='<div class="dots">'+t.c.map(c=>'<i style="background:'+c+'"></i>').join('')+'</div><div class="nm">'+t.nm+'</div><div class="ck">✓</div>';
-  d.addEventListener('click',()=>applyTheme(t.id));
-  tpPanel.appendChild(d);
-});
-tpBtn.addEventListener('click',e=>{e.stopPropagation();tpPanel.classList.toggle('open');});
-document.addEventListener('click',e=>{if(!tpPanel.contains(e.target))tpPanel.classList.remove('open');});
-applyTheme(curTheme);
-
-// 音乐播放/暂停 + 自动播放
 const bgm=document.getElementById('bgm'),bar=document.getElementById('musicBar'),btn=document.getElementById('musicBtn');
 btn.addEventListener('click',(e)=>{
   e.stopPropagation();
