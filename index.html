@@ -133,6 +133,19 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
 
 /* chapter */
 .chapter{padding:64px 0 8px;position:relative;overflow:hidden}
+/* Tips */
+.tips{padding:64px 34px 76px;text-align:center}
+.tips-head{display:flex;flex-direction:column;align-items:center;gap:2px}
+.tips-title{font-size:46px;color:var(--gold);line-height:1.2}
+.tips-sub{font-size:12px;letter-spacing:.5em;text-indent:.5em;color:var(--small);margin-top:6px}
+.tips-card{margin:30px auto 0;max-width:420px;background:rgba(255,255,255,.55);border:1px solid rgba(var(--deep-rgb),.1);border-radius:14px;padding:30px 26px 26px;box-shadow:0 14px 34px rgba(var(--deep-rgb),.1),0 2px 8px rgba(var(--deep-rgb),.05);text-align:left;backdrop-filter:blur(2px)}
+.tip{display:flex;gap:14px;align-items:flex-start}
+.tip+.tip{margin-top:18px}
+.tip i{flex:0 0 24px;height:24px;margin-top:2px;border-radius:50%;border:1px solid var(--gold);color:var(--navy);font-family:'Cormorant Garamond',serif;font-style:normal;font-size:13px;display:flex;align-items:center;justify-content:center;font-variant-numeric:lining-nums}
+.tip p{margin:0;font-size:14.5px;line-height:1.9;color:#5A4A48;letter-spacing:.02em}
+.tips-poem{margin-top:26px;padding-top:22px;border-top:1px dashed rgba(var(--deep-rgb),.18);text-align:center}
+.tips-poem p{margin:0;font-size:15px;line-height:2.1;letter-spacing:.14em;text-indent:.14em;color:var(--ink)}
+.tips-poem .hl{color:var(--navy)}
 /* 第三章 · 沙滩拼贴 */
 .rcol{position:relative;width:88%;margin:26px auto 0;aspect-ratio:3/4;border-radius:6px;overflow:hidden;background:#FEFEFC;box-shadow:0 16px 38px rgba(var(--deep-rgb),.16),0 2px 8px rgba(var(--deep-rgb),.08);z-index:1}
 .rcol-bg{position:absolute;left:0;right:0;bottom:0;height:52%;background:url(assets/ch3-beach.jpg) center 30%/cover no-repeat}
@@ -574,6 +587,25 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <path d="M59,30 q14,-5 16,-19 q-14,3 -16,19 Z"/>
     </g>
   </svg>
+</section>
+
+<!-- ═══════ Tips ═══════ -->
+<section class="tips">
+  <div class="tips-head rv">
+    <span class="tips-title script">Tips</span>
+    <svg class="ch-flourish" width="150" height="14" viewBox="0 0 150 14" aria-hidden="true"><path d="M6,9 C40,2 70,12 75,8 C80,4 60,4 64,8 C70,13 110,4 144,8" class="s-accent" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
+    <span class="tips-sub">温 馨 提 示</span>
+  </div>
+  <div class="tips-card rv d1">
+    <div class="tip rv d1"><i>1</i><p>如果你身在不同的城市，或因繁忙的工作无法到达仪式现场，没关系，我们已经收到祝福了哦 (○’ω’○)</p></div>
+    <div class="tip rv d2"><i>2</i><p>如果你有时间，请准备好你的好心情和好胃口，开开心心的来赴约吧～</p></div>
+    <div class="tip rv d3"><i>3</i><p>婚礼有专业摄影摄像，欢迎大家积极与我们合影记录哦 📷</p></div>
+    <div class="tip rv d4"><i>4</i><p>婚礼忙碌，如若我们招待不周，请多多包涵 ❤️</p></div>
+    <div class="tips-poem rv d5">
+      <p>愿在漫漫人生岁月中</p>
+      <p class="hl">你与笑容皆在</p>
+    </div>
+  </div>
 </section>
 
 </div>
