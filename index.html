@@ -303,13 +303,18 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
 .details .v b{color:var(--gold-lt);font-weight:500}
 .details .v small{display:block;font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.1em;margin-top:6px}
 .details .div{width:1px;height:34px;background:rgba(var(--lt-rgb),.4);margin:30px auto 0}
-.details .hmc{position:relative;margin:34px auto 0;max-width:340px;aspect-ratio:1206/821;background:url(assets/hm-frame.jpg) center/contain no-repeat;filter:drop-shadow(0 10px 24px rgba(0,0,0,.18))}
-.details .hmc-in{position:absolute;left:9%;top:11%;right:21%;bottom:26%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-.details .hmc-title{font-size:17px;font-weight:600;letter-spacing:.4em;text-indent:.4em;color:#B08A4F;margin-bottom:8px}
-.details .hmc-in p{margin:0;font-size:11px;line-height:2.05;letter-spacing:.05em;color:#6E5A54}
+.details .hmc{position:relative;margin:34px auto 0;max-width:340px;aspect-ratio:1780/1206;background:linear-gradient(160deg,#FBF7EE,#F4EDDE);border-radius:4px;box-shadow:0 12px 28px rgba(0,0,0,.2)}
+.details .hmc-frame{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.details .hmc-st{position:absolute;pointer-events:none}
+.details .hmc-st.st1{width:15px;top:9%;right:8%;transform:rotate(10deg)}
+.details .hmc-st.st2{width:13px;bottom:12%;left:6.5%;transform:rotate(-14deg)}
+.details .hmc-st.st3{width:10px;bottom:22%;right:7%;transform:rotate(18deg)}
+.details .hmc-in{position:absolute;left:12%;top:10%;right:12%;bottom:24%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.details .hmc-title{font-size:17px;font-weight:600;letter-spacing:.4em;text-indent:.4em;color:#B08A4F;margin-bottom:6px}
+.details .hmc-in p{margin:0;font-size:11px;line-height:2;letter-spacing:.04em;color:#6E5A54;white-space:nowrap}
 .details .hmc-line span{color:#B08A4F}
-.details .hmc-sign{position:absolute;right:19%;bottom:3.5%;text-align:right;font-size:10px;letter-spacing:.18em;color:#8C4A42;line-height:1.9}
-.details .hmc-sign .script{font-family:'Great Vibes',cursive;font-size:16px;color:#8C4A42}
+.details .hmc-sign{position:absolute;right:0;left:0;bottom:9%;text-align:center;font-size:10px;letter-spacing:.14em;color:#8C4A42}
+.details .hmc-sign .script{font-family:'Great Vibes',cursive;font-size:16px;color:#8C4A42;letter-spacing:.02em}
 
 /* ---------- ending ---------- */
 .ending{padding:72px 34px 56px;text-align:center;position:relative;overflow:hidden}
@@ -549,13 +554,17 @@ body{background:var(--outer);transition:background .4s;font-family:'Noto Serif S
       <div class="v rv d1"><b>2026年9月12日&nbsp;&nbsp;晚&nbsp;19:00</b><br>农历八月初二&nbsp;·&nbsp;星期六</div>
     </div>
     <div class="hmc rv d2">
+      <img class="hmc-frame" src="assets/hm-frame2.png" alt="">
+      <svg class="hmc-st st1" viewBox="0 0 24 24"><path d="M12,21 C7,16 3,12.5 3,8.8 C3,5.9 5.2,4 7.7,4 C9.5,4 11.1,5 12,6.6 C12.9,5 14.5,4 16.3,4 C18.8,4 21,5.9 21,8.8 C21,12.5 17,16 12,21 Z" fill="#C0574F"/></svg>
+      <svg class="hmc-st st2" viewBox="0 0 24 24"><path d="M12,2 L14,9 21,9 15.5,13.4 17.5,21 12,16.8 6.5,21 8.5,13.4 3,9 10,9 Z" fill="#C9A24F"/></svg>
+      <svg class="hmc-st st3" viewBox="0 0 24 24"><path d="M12,2 L14,9 21,9 15.5,13.4 17.5,21 12,16.8 6.5,21 8.5,13.4 3,9 10,9 Z" fill="#D98C9E"/></svg>
       <div class="hmc-in">
         <div class="hmc-title">回门宴</div>
         <p class="hmc-line">如果时间冲突，也可以来参加我们的回门宴哟&nbsp;<span>❦</span></p>
         <p class="hmc-meta">时间：2026年9月27日&nbsp;&nbsp;12:00</p>
-        <p class="hmc-meta">地点：江苏省泰州市唐刘村<br>大唐宴会中心</p>
+        <p class="hmc-meta">地点：江苏省泰州市唐刘村大唐宴会中心</p>
       </div>
-      <div class="hmc-sign"><span class="script">Ouyang &amp; Xiao</span><br>2026&nbsp;.&nbsp;09&nbsp;.&nbsp;27</div>
+      <div class="hmc-sign"><span class="script">Ouyang &amp; Xiao</span>&nbsp;&nbsp;2026&nbsp;.&nbsp;09&nbsp;.&nbsp;27</div>
     </div>
   </section>
   <svg class="wave-bot" viewBox="0 0 480 70" preserveAspectRatio="none" aria-hidden="true">
